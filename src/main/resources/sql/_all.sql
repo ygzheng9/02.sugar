@@ -14,3 +14,7 @@
 #namespace("allocation")
 #include("04.allocation.sql")
 #end
+
+#namespace("conditions")
+#include("05.conditions.sql")
+#end

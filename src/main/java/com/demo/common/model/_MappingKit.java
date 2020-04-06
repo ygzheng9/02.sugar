@@ -81,6 +81,7 @@ public class _MappingKit {
 		arp.addMapping("t_tick", "ID", Tick.class);
 		arp.addMapping("t_upload", "ID", Upload.class);
 		arp.addMapping("t_users", "ID", Users.class);
+		arp.addMapping("t_zuser", "id", Zuser.class);
 		arp.addMapping("tt_pcba_test_info", "TT_PCBA_TEST_INFO_ID", TtPcbaTestInfo.class);
 	}
 }

@@ -4,6 +4,7 @@ import com.demo.blog.BlogController
 import com.demo.common.model._MappingKit
 import com.demo.index.IndexController
 import com.jfinal.config.*
+import com.jfinal.ext.handler.ContextPathHandler
 import com.jfinal.json.MixedJsonFactory
 import com.jfinal.kit.Prop
 import com.jfinal.kit.PropKit
@@ -26,6 +27,10 @@ class DemoConfig : JFinalConfig() {
         me.injectSuperClass = true
 
         me.setJsonFactory(MixedJsonFactory())
+
+
+        /// 设置 devMode 之下的 action report 是否在 invocation 之后，默认值为 true
+        me.setReportAfterInvocation(false)
     }
 
     override fun configRoute(me: Routes) {
@@ -61,7 +66,10 @@ class DemoConfig : JFinalConfig() {
 
     override fun configInterceptor(me: Interceptors) {}
 
-    override fun configHandler(me: Handlers) {}
+    override fun configHandler(me: Handlers) {
+        // 在模板中使用 #(base)  获取 url 的根路径
+        me.add(ContextPathHandler("base"));
+    }
 
     companion object {
         var p: Prop? = null

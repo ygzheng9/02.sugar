@@ -1,7 +1,8 @@
 package com.demo.common
 
-import com.demo.fulfilment.OrderController
 import com.jfinal.config.Routes
+
+import com.demo.fulfilment.OrderController
 
 class APIRoute : Routes() {
     override fun config() {

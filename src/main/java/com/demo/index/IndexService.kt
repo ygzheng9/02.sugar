@@ -1,17 +1,14 @@
 package com.demo.index
 
 import com.demo.blog.BlogService
+import com.demo.common.model.Blog
+import com.demo.common.model.Zuser
 import com.jfinal.aop.Inject
+import com.jfinal.plugin.activerecord.Page
 
 
 open class IndexService {
-    @Inject
-    private lateinit var service: BlogService
 
-    fun check() {
-        val b = service.findById(1)
-        println(b)
-    }
 }
 
 fun main() {
