@@ -13,18 +13,16 @@ layui.use(['form', 'layer', 'table', 'jquery', 'metis'], function () {
     form.on('submit(saveBtn2)', function (data) {
         data.field.roles = metis.getCheckBoxValues('roles');
 
-        console.log(data);
-
         return false;
     });
 
     form.on('submit(saveBtn)', function (data) {
-        data.field.roles = data.field.roles = metis.getCheckBoxValues('roles');
+        data.field.roles = metis.getCheckBoxValues('roles');
 
         $.post("/userCreateOrUpdate", {param: JSON.stringify(data.field)}).then(function(res) {
             if (res.state === 'ok') {
-                const index = layer.alert('保存成功', {
-                    title: '操作成功'
+                const index = layer.msg('保存成功', {
+                    time: 300
                 }, function () {
                     table.reload('currentTableId');
                     // 关闭弹出层
