@@ -10,7 +10,7 @@
   },
   "menuInfo": [
     {
-      "title": "常规管理",
+      "title": "基础管理",
       "icon": "fa fa-address-book",
       "href": "",
       "target": "_self",
@@ -136,57 +136,118 @@
       ]
     },
     {
-      "title": "组件管理",
+      "title": "营销管理",
       "icon": "fa fa-lemon-o",
       "href": "",
       "target": "_self",
       "child": [
         {
-          "title": "图标列表",
-          "href": "page/icon.html",
+          "title": "客户档案",
+          "href": "",
           "icon": "fa fa-dot-circle-o",
-          "target": "_self"
+          "target": "_self",
+          "child": [
+            {
+              "title": "新增客户",
+              "href": "page/sales/client/newClient",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "客户清单",
+              "href": "page/sales/client/list",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "客户基本信息",
+              "id": "menuBasicInfo",
+              "href": "page/sales/client/basicInfo",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "过往合作记录",
+              "href": "page/sales/client/history",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "组织架构图",
+              "href": "page/sales/client/orgInfo",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "关键决策人",
+              "href": "page/sales/client/stakeholder",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            }
+          ]
         },
         {
-          "title": "图标选择",
-          "href": "page/icon-picker.html",
-          "icon": "fa fa-adn",
-          "target": "_self"
+          "title": "商机管理",
+          "href": "",
+          "icon": "fa fa-dot-circle-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "商机报备",
+              "href": "page/sales/lead/newLead",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "商机列表",
+              "href": "page/sales/lead/listLead",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "商机详情",
+              "href": "page/lead/basicInfo",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "商机历史",
+              "href": "page/sales/lead/history",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "跨部门合作",
+              "href": "page/sales/lead/crossHelp",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            }
+          ]
         },
         {
-          "title": "颜色选择",
-          "href": "page/color-select.html",
-          "icon": "fa fa-dashboard",
-          "target": "_self"
-        },
-        {
-          "title": "下拉选择",
-          "href": "page/table-select.html",
-          "icon": "fa fa-angle-double-down",
-          "target": "_self"
-        },
-        {
-          "title": "文件上传",
-          "href": "page/upload.html",
-          "icon": "fa fa-arrow-up",
-          "target": "_self"
-        },
-        {
-          "title": "富文本编辑器",
-          "href": "page/editor.html",
-          "icon": "fa fa-edit",
-          "target": "_self"
-        },
-        {
-          "title": "省市县区选择器",
-          "href": "page/area.html",
-          "icon": "fa fa-rocket",
-          "target": "_self"
+          "title": "经营决策",
+          "href": "",
+          "icon": "fa fa-dot-circle-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "管理驾驶舱",
+              "href": "page/sales/management/dashboard",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "审批",
+              "href": "page/sales/management/approval",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "其它管理",
+      "title": "供应链",
       "icon": "fa fa-slideshare",
       "href": "",
       "target": "_self",

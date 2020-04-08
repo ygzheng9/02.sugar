@@ -50,6 +50,14 @@
     + form 提交时拦截，通过 js 获取
     + layui 自定义模块 metis    
      
+## 2020/04/09
+1. js 把全局数据保存在 state 中；
+2. 菜单项中，可以设置 id，在 js 中访问，附加 url 参数，触发 click
+3. html 中 url querystring 附加参数给 后台
+4. js 中从 html 的 div 中取出 参数，给后台；
+5. 后台把 数据 写入 div 中，供 js 使用；
+    
+    
     
 ## todo 
 1. upload

@@ -24,3 +24,41 @@ order by id asc
 #end
 
 ### 后面有分页，所以这里结束不能有分号;
+
+
+### 用户查询界面上面的查询条件
+#sql("findClient")
+select *
+from t_zclient
+where 1 = 1
+#if(clientName)
+AND clientName like concat('%', #para(clientName), '%')
+#end
+#if(clientCode)
+AND clientCode like concat('%', #para(clientCode), '%')
+#end
+#if(address)
+AND address like concat('%', #para(address), '%')
+#end
+#if(channelType)
+AND channelType like concat('%', #para(channelType), '%')
+#end
+order by id asc
+#end
+
+
+### 用户查询界面上面的查询条件
+#sql("findCall")
+select *
+from t_z_client_call
+where clientid = #para(0)
+order by id asc
+#end
+
+#sql("findPotentialByClient")
+select *
+ from t_z_client_potential
+where clientid = #para(0)
+;
+#end
+

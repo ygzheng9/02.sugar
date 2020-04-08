@@ -3,6 +3,7 @@ package com.demo.common
 import com.demo.blog.BlogController
 import com.demo.common.model._MappingKit
 import com.demo.index.IndexController
+import com.demo.sales.ClientController
 import com.jfinal.config.*
 import com.jfinal.ext.handler.ContextPathHandler
 import com.jfinal.json.MixedJsonFactory
@@ -35,6 +36,10 @@ class DemoConfig : JFinalConfig() {
 
     override fun configRoute(me: Routes) {
         me.add("/", IndexController::class.java, "/index")
+
+        me.add("/page/sales/client", ClientController::class.java, "/sales/client")
+
+
         me.add("/blog", BlogController::class.java)
 
         me.add(APIRoute())
